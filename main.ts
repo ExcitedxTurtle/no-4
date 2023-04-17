@@ -1,4 +1,11 @@
 function hardLeft () {
+    basic.showLeds(`
+        . . # . .
+        . # . . .
+        # # # # #
+        . # . . .
+        . . # . .
+        `)
     maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, 40)
     maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CCW, 40)
     basic.pause(100)
@@ -35,14 +42,35 @@ function avoid () {
     basic.pause(500)
 }
 function fullStop () {
+    basic.showLeds(`
+        . # # # .
+        # . . . #
+        # # # # #
+        # . . . #
+        . # # # .
+        `)
     maqueen.motorStop(maqueen.Motors.All)
     basic.pause(100)
 }
 function softRight () {
+    basic.showLeds(`
+        . . # . .
+        . . . # .
+        # # # # #
+        . . . # .
+        . . # . .
+        `)
     maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, 40)
     maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CW, 10)
 }
 function softLeft () {
+    basic.showLeds(`
+        . . # . .
+        . # . . .
+        # # # # #
+        . # . . .
+        . . # . .
+        `)
     maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, 10)
     maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CW, 40)
 }
